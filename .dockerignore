@@ -1,0 +1,10 @@
+.git/
+.history/
+.vscode/
+node_modules/
+.husky/
+dist
+Dockerfile
+docker-compose.yml
+.dockerignore
+.gitignore
