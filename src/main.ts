@@ -48,7 +48,7 @@ async function bootstrap() {
 
 const runPrimaryProcess = () => {
   const processesCount = os.cpus().length * 2;
-
+  //const processesCount = 1;
   for (let i = 0; i < processesCount; i++) {
     cluster.fork();
   }

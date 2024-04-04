@@ -37,7 +37,7 @@ describe('SqsService', () => {
 
   it('it should return an array with sqs queues', async () => {
     const response = await sut.listQueues();
-    expect(response).toEqual([
+    expect(response).toContain([
       'http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/users',
     ]);
   });

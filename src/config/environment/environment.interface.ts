@@ -5,4 +5,6 @@ export interface IEnvironmentVariables {
   getAwsRegion(): string;
   getAwsAccessKeyId(): string;
   getAwsSecretAccessKey(): string;
+  getFirstQueueUrl(): string;
+  getSeccondQueueUrl(): string;
 }

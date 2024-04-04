@@ -3,8 +3,9 @@ import { SqsService } from './sqs.service';
 import { EnvConfigModule } from '@/config/environment/env-config/env-config.module';
 import { EnvConfigService } from '@/config/environment/env-config/env-config.service';
 
+import { ScheduleModule } from '@nestjs/schedule';
 @Module({
-  imports: [EnvConfigModule.forRoot()],
+  imports: [EnvConfigModule.forRoot(), ScheduleModule.forRoot()],
   providers: [
     SqsService,
     {
@@ -13,5 +14,6 @@ import { EnvConfigService } from '@/config/environment/env-config/env-config.ser
     },
   ],
   exports: [SqsService],
+  controllers: [],
 })
 export class SqsModule {}

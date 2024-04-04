@@ -6,6 +6,14 @@ import { ConfigService } from '@nestjs/config';
 export class EnvConfigService implements IEnvironmentVariables {
   constructor(private readonly configService: ConfigService) {}
 
+  getFirstQueueUrl(): string {
+    return this.configService.get<string>('FIRST_QUEUE_URL');
+  }
+
+  getSeccondQueueUrl(): string {
+    return this.configService.get<string>('SECCOND_QUEUE_URL');
+  }
+
   getAwsEndpoint(): string {
     return this.configService.get<string>('AWS_ENDPOINT');
   }
